@@ -18,28 +18,28 @@
     <div class="portfolio-div">
       <div class="footer-div">
         <div class="menu-div">
-          <button class="home-button">
+          <button class="home-button" id="homeButton">
             <div class="frame-div">
               <img class="home-icon" alt="" src="public/home.svg" />
             </div>
             <div class="frame-div">
               <div class="home-div">Home</div>
             </div></button
-          ><button class="home-button">
+          ><button class="home-button" id="aboutButton">
             <div class="frame-div">
               <img class="home-icon" alt="" src="public/person-outline.svg" />
             </div>
             <div class="frame-div">
               <div class="home-div">About me</div>
             </div></button
-          ><button class="home-button">
+          ><button class="home-button" id="workButton">
             <div class="frame-div">
               <img class="home-icon" alt="" src="public/work.svg" />
             </div>
             <div class="frame-div">
               <div class="home-div">Work</div>
             </div></button
-          ><button class="home-button">
+          ><button class="home-button" id="contactButton">
             <div class="frame-div">
               <div class="phone-fill-div">
                 <img class="vector-icon" alt="" src="public/vector-189.svg" />
@@ -49,11 +49,19 @@
           </button>
         </div>
         <div class="social-media-div">
-          <img class="instagram-icon" alt="" src="public/instagram.svg" /><img
-            class="instagram-icon"
-            alt=""
-            src="public/linkedin.svg"
-          />
+          <button class="instagram-button" id="instagramButton">
+            <img class="circle-icon" alt="" src="public/circle.svg" /><img
+              class="instagram-icon"
+              alt=""
+              src="public/instagram-icon.svg"
+            /></button
+          ><button class="instagram-button" id="linkedinButton">
+            <img class="circle-icon" alt="" src="public/circle1.svg" /><img
+              class="linkedin-icon"
+              alt=""
+              src="public/linkedin-icon.svg"
+            />
+          </button>
         </div>
         <div class="separator-div"></div>
         <div class="terms-of-service-privacy-pol">
@@ -134,12 +142,12 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
               class="ellipse-icon5"
               alt=""
               src="public/ellipse-1432.svg"
-            /><a
-              class="akar-iconsbehance-fill"
-              href="https://www.behance.net/akshayjohn2"
-              target="_blank"
-              ><img class="group-icon" alt="" src="public/group.svg"
-            /></a>
+            /><button
+              class="akar-iconsbehance-fill-button"
+              id="akarIconsbehanceFillButton"
+            >
+              <img class="group-icon" alt="" src="public/group.svg" />
+            </button>
           </div>
           <img
             class="bg-small-circle1"
@@ -233,10 +241,7 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
           <img class="background-icon2" alt="" src="public/background2.svg" />
           <div class="frame-div10">
             <div class="frame-div11" data-scroll-to="frameContainer">
-              <textarea class="my-name-is-akshay-john-im-cu">
-<p class="my-name-is-akshay-john-im-cu1"><span class="connect-with-my">My name is Akshay John. I’m currently holding 4.6+ Years of experience in the Design field. 
-  I have experience in B2B & B2C. I have also worked on C2C in few projects. </p></textarea
-              ><b class="about-me">About me</b
+              <b class="about-me">About me</b
               ><img class="group-icon1" alt="" src="public/group-3437.svg" />
             </div>
           </div>
@@ -244,7 +249,9 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
             class="illustration-icon1"
             alt=""
             src="public/illustration1.svg"
-          />
+          /><textarea class="my-name-is-akshay-john-im-cu">
+<p class="my-name-is-akshay-john-im-cu1"><span class="connect-with-my">My name is </span><span class="portolio-link-span">Akshay John</span><span class="connect-with-my">. I’m currently holding </span><span class="portolio-link-span">4.6+ Years of experience</span><span class="connect-with-my"> in the </span><b class="connect-with-my">Design</b><span class="connect-with-my"> field. </span></p><p class="yes-i-have-a-long-way-to"><span class="connect-with-my">I have experience in </span><span class="portolio-link-span">B2B & B2C</span><span class="connect-with-my">. I have also worked on </span><span class="portolio-link-span">C2C</span><span class="connect-with-my"> in few projects.</span></p></textarea
+          ><img class="image-1-icon" alt="" src="public/image-1@2x.png" />
         </div>
         <img
           class="vectary-texture-icon2"
@@ -335,7 +342,11 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
           </div>
         </div>
         <div class="simple-iconsajv-div"></div>
-        <img class="epcaret-bottom-icon" alt="" src="public/epcaretbottom.svg"
+        <img
+          class="epcaret-bottom-icon"
+          alt=""
+          src="public/epcaretbottom.svg"
+          id="epcaretBottom"
       /></a>
       <div class="illustration-div">
         <img class="icon3" alt="" src="public/6@2x.png" />
@@ -343,6 +354,62 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
     </div>
 
     <script>
+      var homeButton = document.getElementById("homeButton");
+      if (homeButton) {
+        homeButton.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='homePageLink']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var aboutButton = document.getElementById("aboutButton");
+      if (aboutButton) {
+        aboutButton.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='aboutMePage']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var workButton = document.getElementById("workButton");
+      if (workButton) {
+        workButton.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='workPageContainer']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var contactButton = document.getElementById("contactButton");
+      if (contactButton) {
+        contactButton.addEventListener("click", function () {
+          var anchor = document.querySelector(
+            "[data-scroll-to='contactPageContainer']"
+          );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var instagramButton = document.getElementById("instagramButton");
+      if (instagramButton) {
+        instagramButton.addEventListener("click", function () {
+          window.open("https://www.instagram.com/_akshay_john/");
+        });
+      }
+      
+      var linkedinButton = document.getElementById("linkedinButton");
+      if (linkedinButton) {
+        linkedinButton.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/feed/");
+        });
+      }
+      
       var frameButton2 = document.getElementById("frameButton2");
       if (frameButton2) {
         frameButton2.addEventListener("click", function () {
@@ -355,6 +422,15 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
         frameButton3.addEventListener("click", function () {
           window.location.href =
             "mailto:Akshay3irshi@gmail.com?subject=With reference to your website";
+        });
+      }
+      
+      var akarIconsbehanceFillButton = document.getElementById(
+        "akarIconsbehanceFillButton"
+      );
+      if (akarIconsbehanceFillButton) {
+        akarIconsbehanceFillButton.addEventListener("click", function () {
+          window.open("https://www.behance.net/akshayjohn2");
         });
       }
       
@@ -484,6 +560,16 @@ I’m very approachable and would love to speak to you. Feel free to call, send 
           var anchor = document.querySelector(
             "[data-scroll-to='contactPageContainer']"
           );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var epcaretBottom = document.getElementById("epcaretBottom");
+      if (epcaretBottom) {
+        epcaretBottom.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='aboutMePage']");
           if (anchor) {
             anchor.scrollIntoView({ block: "start", behavior: "smooth" });
           }
