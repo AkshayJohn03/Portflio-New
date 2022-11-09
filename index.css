@@ -84,17 +84,59 @@ body {
   left: 394px;
   gap: 50px;
 }
+.circle-icon,
 .instagram-icon {
+  position: absolute;
+  height: 83.33%;
+  width: 83.33%;
+  top: 8.33%;
+  right: 8.33%;
+  bottom: 8.33%;
+  left: 8.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.instagram-icon {
+  height: 50%;
+  width: 50%;
+  top: 25%;
+  right: 25%;
+  bottom: 25%;
+  left: 25%;
+}
+.instagram-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   position: relative;
   width: 48px;
   height: 48px;
   flex-shrink: 0;
   overflow: hidden;
 }
+.frame-button2:hover,
+.instagram-button:hover {
+  animation: 1s ease 0s infinite normal none scale-up;
+  opacity: 1;
+}
+.linkedin-icon {
+  position: absolute;
+  height: 43.38%;
+  width: 45.83%;
+  top: 25%;
+  right: 25%;
+  bottom: 31.62%;
+  left: 29.17%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
 .social-media-div {
   position: absolute;
-  top: 215px;
-  left: 655px;
+  top: 210px;
+  left: 667px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -262,10 +304,6 @@ body {
   justify-content: center;
   gap: var(--gap-sm);
 }
-.frame-button2:hover {
-  animation: 1s ease 0s infinite normal none scale-up;
-  opacity: 1;
-}
 .exclude-icon {
   position: relative;
   width: 20px;
@@ -409,8 +447,11 @@ body {
   bottom: 16.67%;
   left: 0;
 }
-.akar-iconsbehance-fill {
-  text-decoration: none;
+.akar-iconsbehance-fill-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   position: absolute;
   top: 59px;
   left: 110px;
@@ -418,7 +459,7 @@ body {
   height: 59px;
   overflow: hidden;
 }
-.akar-iconsbehance-fill:hover,
+.akar-iconsbehance-fill-button:hover,
 .logoswix-a:hover {
   animation: 1s ease 0s infinite normal none shadow-pop-tr;
   opacity: 1;
@@ -710,23 +751,6 @@ body {
   width: 1202.6px;
   height: 1024px;
 }
-.my-name-is-akshay-john-im-cu1 {
-  margin-block-start: 0;
-  margin-block-end: 17.18px;
-}
-.my-name-is-akshay-john-im-cu {
-  border: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 369px;
-  left: 270px;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--color-white);
-  text-align: left;
-  display: inline-block;
-  width: 306px;
-}
 .about-me,
 .group-icon1 {
   position: absolute;
@@ -763,7 +787,6 @@ body {
   background: linear-gradient(144.11deg, #c961de, #2954a3);
   height: 630px;
 }
-.frame-div9,
 .illustration-icon1 {
   position: absolute;
   top: 518px;
@@ -771,7 +794,33 @@ body {
   width: 360.82px;
   height: 517.63px;
 }
+.my-name-is-akshay-john-im-cu1 {
+  margin-block-start: 0;
+  margin-block-end: 17.18px;
+}
+.my-name-is-akshay-john-im-cu {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 368px;
+  left: 452px;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  width: 306px;
+}
+.image-1-icon {
+  position: absolute;
+  top: 368px;
+  left: 452px;
+  width: 321px;
+  height: 165px;
+  object-fit: cover;
+}
 .frame-div9 {
+  position: absolute;
   top: -28px;
   left: 209px;
   width: 1021.99px;
@@ -960,10 +1009,11 @@ body {
   overflow: hidden;
 }
 .epcaret-bottom-icon {
-  top: 821px;
+  top: 767px;
   left: 658px;
   width: 124px;
   height: 124px;
+  cursor: pointer;
 }
 .home-page {
   text-decoration: none;
