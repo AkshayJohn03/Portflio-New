@@ -110,19 +110,24 @@ body {
   border: 0;
   padding: 0;
   background-color: transparent;
-  position: relative;
+  top: 210px;
+  left: 667px;
   width: 48px;
   height: 48px;
-  flex-shrink: 0;
-  overflow: hidden;
 }
 .frame-button2:hover,
-.instagram-button:hover {
+.instagram-button:hover,
+.linkedin-button:hover {
   animation: 1s ease 0s infinite normal none scale-up;
   opacity: 1;
 }
+.instagram-button,
+.linkedin-button,
 .linkedin-icon {
   position: absolute;
+  overflow: hidden;
+}
+.linkedin-icon {
   height: 43.38%;
   width: 45.83%;
   top: 25%;
@@ -130,18 +135,17 @@ body {
   bottom: 31.62%;
   left: 29.17%;
   max-width: 100%;
-  overflow: hidden;
   max-height: 100%;
 }
-.social-media-div {
-  position: absolute;
+.linkedin-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   top: 210px;
-  left: 667px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 10px;
+  left: 725px;
+  width: 48px;
+  height: 48px;
 }
 .separator-div {
   position: absolute;
